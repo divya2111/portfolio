@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">V N S Divya Lakshmi Paruchuri</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="social-icons">
+        <a href="https://github.com/divya2111" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/divyaparuchuri" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:divyaparuchuri2111@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </header>
+
+    <!-- Contact Form -->
+    <div class="floating-particles"></div>
+    <section class="contact-container">
+      <h2>Contact Me</h2>
+      <form class="contact-form">
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+        <input type="email" id="email" name="email" placeholder="Your Email" required />
+        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+      <div class="contact-social">
+        <a href="https://linkedin.com/in/divyaparuchuri" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/divya2111" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:divyaparuchuri2111@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    </section>
+
+    <!-- JavaScript for Sending Form Data to Backend -->
+    <script>
+      document.getElementById("contact-form").addEventListener("submit", async function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        const requestData = { name, email, message };
+
+        try {
+          const response = await fetch("http://localhost:8080/contact/submit", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(requestData),
+          });
+
+          if (response.ok) {
+            alert("Message sent successfully!");
+            document.getElementById("contact-form").reset();
+          } else {
+            alert("Failed to send message. Please try again.");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          alert("An error occurred while sending the message.");
+        }
+      });
+    </script>
+  </body>
+</html>

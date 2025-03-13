@@ -1,0 +1,287 @@
+/* Global Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header Styles */
+  header {
+    background: #222;
+    color: #fff;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  header .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-left: 1100px;
+  }
+  header nav ul li {
+    margin-left: 20px;
+  }
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    
+  }
+  header nav ul li a:hover {
+    color: hwb(226 45% 33%);
+  }
+  header .social-icons a {
+    margin-left: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+  header .social-icons a:hover {
+    transform: scale(1.1);
+  }
+  
+  /* About Page */
+  .about-container {
+    background: url("img/aboutt.jpg") no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+    min-height: 92vh; /* Full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    backdrop-filter: blur(3px); /* Slight blur effect for readability */
+    padding-left: 10%; 
+  }
+  
+  .about-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    margin-left: -450px;
+    width: 100%; /* Makes it span full width */
+    
+  }
+  
+  .about-container p {
+    font-size: 1.2rem;
+    width: 60%;
+    max-width: 800px;
+    line-height: 1.6;
+  }
+  
+  
+  /* Projects Page */
+  .projects-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+  .projects-container h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: hsl(0, 25%, 98%);
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .project-item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  .project-item:hover {
+    transform: translateY(-5px);
+  }
+  .project-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .project-item .project-info {
+    padding: 20px;
+  }
+  .project-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #333;
+  }
+  .project-item p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #555;
+  }
+  .project-item a {
+    display: inline-block;
+    padding: 8px 16px;
+    background: hsl(226, 75%, 19%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  .project-item a:hover {
+    background: hwb(219 2% 75%);
+  }
+  
+  /* 🌟 Background Gradient */
+body {
+  background: linear-gradient(135deg, #0F172A, #1E3A8A);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* 📧 Contact Container */
+.contact-container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* 🏆 Contact Heading */
+.contact-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* ✉️ Contact Text */
+.contact-text {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+/* 📝 Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 120px;
+}
+
+/* 🎯 Button Styling */
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: white;
+  background: rgb(8, 75, 221);
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #1e40af;
+}
+
+/* 🚀 Social Icons */
+.contact-social {
+  margin-top: 20px;
+}
+
+.contact-social a {
+  color: white;
+  font-size: 1.8rem;
+  margin: 0 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-social a:hover {
+  transform: scale(1.2);
+}
+
+/* 🎬 Floating Particles Animation */
+.floating-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.floating-particles::before,
+.floating-particles::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: float 10s infinite alternate ease-in-out;
+}
+
+.floating-particles::before {
+  top: 10%;
+  left: 15%;
+  animation-duration: 12s;
+}
+
+.floating-particles::after {
+  bottom: 10%;
+  right: 20%;
+  animation-duration: 15s;
+}
+
+/* 🎥 Floating Animation */
+@keyframes float {
+  from {
+      transform: translateY(0);
+  }
+  to {
+      transform: translateY(-20px);
+  }
+}
+
+  
