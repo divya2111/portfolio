@@ -25,7 +25,7 @@ const contactData = {
     message: document.getElementById("message").value
 };
 
-fetch("http://localhost:8080/contact/submit", {
+fetch("bewildered-wallie-konerulakshmaiaheducationfoudation-f59b3746.koyeb.app/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(contactData)
