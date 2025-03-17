@@ -214,7 +214,7 @@ body {
   padding: 12px 24px;
   font-size: 1rem;
   color: white;
-  background: rgb(8, 75, 221);
+  background: hsl(226, 75%, 19%);
   border-radius: 6px;
   text-decoration: none;
   border: none;
@@ -223,7 +223,7 @@ body {
 }
 
 .btn:hover {
-  background: #1e40af;
+  background: hwb(219 2% 75%);
 }
 
 /* 🚀 Social Icons */
