@@ -328,4 +328,8 @@ header .social-icons a {
 header .social-icons a:hover {
   transform: scale(1.1);
 }
-  
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto; 
+}
