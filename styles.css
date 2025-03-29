@@ -283,5 +283,49 @@ body {
       transform: translateY(-20px);
   }
 }
+menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
 
+/* 📱 Mobile Menu Styles */
+@media (max-width: 768px) {
+  nav ul {
+      display: none;
+      flex-direction: row;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: #222;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+  }
+
+  nav ul.active {
+      display: flex;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+}
+
+/* 🌍 Social Icons */
+header .social-icons a {
+  margin-left: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+header .social-icons a:hover {
+  transform: scale(1.1);
+}
   
